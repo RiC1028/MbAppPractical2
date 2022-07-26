@@ -8,22 +8,68 @@
 
     <TextView
         android:id="@+id/box1"
+        style="@style/whiteBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_wide_custom"
         android:layout_marginTop="@dimen/margin_wide_custom"
         android:layout_marginEnd="@dimen/margin_wide_custom"
-        android:background="@android:color/holo_blue_light"
-        android:padding="@dimen/small_padding"
         android:text="@string/box_one"
-        android:textAlignment="center"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/box2"
+        style="@style/whiteBox"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="@dimen/margin_wide_custom"
+        android:layout_marginTop="@dimen/margin_wide_custom"
+        android:text="@string/box_two"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/box1" />
+
+    <TextView
+        android:id="@+id/box3"
+        style="@style/whiteBox"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_wide_custom"
+        android:layout_marginEnd="@dimen/margin_wide_custom"
+        android:text="@string/box_three"
+        app:layout_constraintStart_toEndOf="@id/box2"
+        app:layout_constraintTop_toTopOf="@+id/box2"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/box4"
+        style="@style/whiteBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_wide_custom"
+        android:layout_marginEnd="@dimen/margin_wide_custom"
+        android:layout_marginTop="@dimen/margin_wide_custom"
+        android:text="@string/box_four"
+        app:layout_constraintBottom_toTopOf="@+id/box5"
+        app:layout_constraintStart_toEndOf="@id/box2"
+        app:layout_constraintTop_toBottomOf="@+id/box3"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/box5"
+        style="@style/whiteBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_wide_custom"
+        android:layout_marginTop="@dimen/margin_wide_custom"
+        android:layout_marginEnd="@dimen/margin_wide_custom"
+        android:text="@string/box_five"
+        app:layout_constraintBottom_toBottomOf="@+id/box2"
+        app:layout_constraintStart_toEndOf="@id/box2"
+        app:layout_constraintTop_toBottomOf="@+id/box4"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
